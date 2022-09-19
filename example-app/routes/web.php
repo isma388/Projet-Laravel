@@ -23,11 +23,17 @@ use Illuminate\Support\Facades\Route;
 //
 //});
 
-Route::get('/', HomeController:: class);
+Route::get('/',[HomeController:: class,'home']);
 
-Route::get('/product', [ProductController::class,'listProduct']);
+Route::get('/product', [ProductController::class,'product']);
 
 Route::get('/product/{id}',[ProductController::class,'detailProduct']);
 
 Route::get('/cart', CartController::class);
+
+Route::get('/name', [ProductController::class,'byName']);
+
+Route::get('/price', [ProductController::class,'price']);
+
+Route::get('/name/{id}', [ProductController::class,'name_price']);
 
