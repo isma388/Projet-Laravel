@@ -27,19 +27,19 @@ class ProductController extends Controller
 //    }
 
 
-//    public function index()
-//    {
-//        $products = DB::select('select * from products ');
-//        return view('product-list', ['products' => $products]);
-//
-//    }
-//
-//    public function detailProduct($id){
-//
-//        $db = DB::select('SELECT * FROM products where id = ' . $id);
-//
-//        return view('product-details',['db'=> $db[0]]);
-//    }
+    public function index()
+    {
+        $products = DB::select('select * from products ');
+        return view('product-list', ['products' => $products]);
+
+    }
+
+    public function detailProduct($id){
+
+        $db = DB::select('SELECT * FROM products where id = ' . $id);
+
+        return view('product-details',['db'=> $db[0]]);
+    }
 
 
     public function byName()
@@ -51,6 +51,7 @@ class ProductController extends Controller
 
     public function price()
     {
+
         $products = Product::orderBy('price','desc')->get();
 
         return view('price', ['products'=> $products]);
@@ -59,11 +60,13 @@ class ProductController extends Controller
     public function name_price($id)
     {
         $products = Product::find($id);
-
         return view('nameAndPrice', ['products'=> $products]);
 
     }
+
 }
+
+
 
 
 

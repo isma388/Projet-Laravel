@@ -11,6 +11,7 @@
         <img src="{{$product-> image}}" width="300" alt="">
         <div class="flex-column-reverse pt-5">
             <br>
+            <p>Prix: {{$product->price}} €</p>
         </div>
     </div>
 </div>

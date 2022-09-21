@@ -19,8 +19,8 @@
                 </div>
 
             </div>
-            <br>
-            <button class="btn btn-primary btn-sm" type="submit">Ajouter au panier</button>
+{{--            <br>--}}
+{{--            <button class="btn btn-primary btn-sm" type="submit">Ajouter au panier</button>--}}
 
             <br>
             <div class="start-50">
